@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Load data
-df = pd.read_csv(r'C:\Users\91744\OneDrive\Desktop\Sales-Dashboards\train.csv', encoding='latin1')
+df = pd.read_csv('train.csv', encoding='latin1')
 df['Order Date'] = pd.to_datetime(df['Order Date'], dayfirst=True)
 df['Month'] = df['Order Date'].dt.to_period('M')
 df['Year'] = df['Order Date'].dt.year
